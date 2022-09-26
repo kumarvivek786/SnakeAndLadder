@@ -14,8 +14,8 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
 
-            //UC-5 Exact Winning Position
-            int Start_Position = 0, r = 0, choice = 0;
+            //UC-5 Number Of Dice Roll
+            int Start_Position = 0, r = 0, choice = 0, count = 0;
             const int NOPLAY = 0;
             const int LADDER = 1;
             const int SNAKE = 2;
@@ -49,10 +49,11 @@ namespace SnakeAndLadder
                         }
                         Console.WriteLine("position:{0}", Start_Position);
                         break;
-                }
+                }   count++;
                 
             }
-                Console.ReadLine();
+                    Console.WriteLine("Number of Dice Roll: {0}", count);
+                    Console.ReadLine();
 
         }
 
