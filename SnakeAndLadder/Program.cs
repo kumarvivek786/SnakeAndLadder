@@ -14,7 +14,7 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
 
-            //UC-5 Number Of Dice Roll
+            //UC-6 Number Of Dice Roll
             int Start_Position = 0, r = 0, choice = 0, count = 0;
             const int NOPLAY = 0;
             const int LADDER = 1;
