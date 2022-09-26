@@ -14,11 +14,11 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
 
-            //UC-4 Repeat Till Win
+            //UC-5 Exact Winning Position
             int Start_Position = 0, r = 0, choice = 0;
             const int NOPLAY = 0;
             const int LADDER = 1;
-            const int SNAKE=2;
+            const int SNAKE = 2;
             Random random = new Random();
             while (Start_Position < 100)
             {
@@ -36,25 +36,32 @@ namespace SnakeAndLadder
                     case LADDER:
                         Start_Position = Start_Position + r;
                         Console.WriteLine("position: {0}", Start_Position);
+                        if (Start_Position > 100)
+                        {
+                            Start_Position = Start_Position - r;
+                        }
                         break;
                     case SNAKE:
                         Start_Position = Start_Position - r;
                         if (Start_Position < 0)
+                        {
                             Start_Position = 0;
+                        }
                         Console.WriteLine("position:{0}", Start_Position);
                         break;
                 }
-                Start_Position++;
                 
-
             }
                 Console.ReadLine();
 
-
-
         }
+
+
+
+
     }
-}
+    }
+
     
 
 
